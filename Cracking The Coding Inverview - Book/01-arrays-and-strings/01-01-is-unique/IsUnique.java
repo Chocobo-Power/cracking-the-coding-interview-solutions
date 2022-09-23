@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class isUnique {
+public class IsUnique {
 
     public static Boolean allUnique(String word) {
 
