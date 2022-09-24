@@ -1,3 +1,16 @@
+// 2022-09-24
+/* 
+* The most difficult part for me is to iterate the matrix in rotation
+* I managed to rotate the pointers this way 
+* | x-- | -x- | --x | --- | --- | --- | --- | --- |
+* | --- | --- | --- | --x | --- | --- | --- | x-- |
+* | --- | --- | --- | --- | --x | -x- | x-- | --- |
+* But I want to rotate them this way instead (can't!)
+* | x-- | --x | --- | --- | -x- | --- | --- | --- |
+* | --- | --- | --- | --- | --- | --x | --- | x-- |
+* | --- | --- | --x | x-- | --- | --- | -x- | --- |
+*/ 
+
 public class RotateMatrix {
 
     static void printMatrix(int[][] matrix) {
@@ -19,16 +32,7 @@ public class RotateMatrix {
         System.out.println("---------------------");
     }    
 
-    public static void main(String[] args) {
-
-        int[][] matrix = {  { 1, 2, 3, 4}, 
-                            { 5, 6, 7, 8}, 
-                            { 9,10,11,12}, 
-                            {13,14,15,16}};
-
-        // Before rotation
-        System.out.println("Before rotation: ");
-        printMatrix(matrix);
+    static void rotateMatrix(int[][] matrix) {
 
         int layers = matrix.length / 2;
 
@@ -77,6 +81,21 @@ public class RotateMatrix {
                 }
             }
         }
+
+    }
+
+    public static void main(String[] args) {
+
+        int[][] matrix = {  { 1, 2, 3, 4}, 
+                            { 5, 6, 7, 8}, 
+                            { 9,10,11,12}, 
+                            {13,14,15,16}};
+
+        // Before rotation
+        System.out.println("Before rotation: ");
+        printMatrix(matrix);
+
+        rotateMatrix(matrix);
 
         // After rotation
         System.out.println("After rotation: ");
