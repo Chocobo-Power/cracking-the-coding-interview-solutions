@@ -7,7 +7,7 @@ public class ZeroMatrix {
     static void printMatrix(int[][] matrix) {
 
         for (int[] row : matrix) {
-            System.out.println("---------------------");
+            System.out.println("-----------------");
             System.out.print("| ");
             for (int cell : row) {
                 if (cell != 0) {
@@ -20,7 +20,7 @@ public class ZeroMatrix {
             }
             System.out.print("\n");
         }
-        System.out.println("---------------------");
+        System.out.println("-----------------");
     }    
 
     static void zeroMatrix(int[][] matrix) {
@@ -54,11 +54,10 @@ public class ZeroMatrix {
 
     public static void main(String[] args) {
 
-        int[][] matrix = {  {1, 1, 1, 1, 1}, 
-                            {1, 1, 1, 1, 1}, 
-                            {1, 0, 1, 1, 1}, 
-                            {1, 1, 1, 1, 1},
-            			    {1, 1, 1, 0, 1}};
+        int[][] matrix = {  {1, 1, 1, 0}, 
+                            {1, 1, 1, 1}, 
+                            {1, 0, 1, 1}, 
+                            {1, 1, 1, 1}};
 
         // Before ZeroMatrix
         System.out.println("Before ZeroMatrix: ");
